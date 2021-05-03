@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PhaserJS</title>
+  <link rel="shortcut icon" type="image/png" href="images/ico_full.png"/>
+  <link rel="stylesheet" href="stylesheet/prism.css">
+  <link rel="stylesheet" href="stylesheet/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+  <!-- Introduction -->
+  <div class="banner" style="display: block !important; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-08-29-13-52/nintendo-takes-down-11-year-old-pokemon-fangame-kit-1535547168922.jpg/EG11/thumbnail/750x422/format/jpg/quality/60');">
+    <div id="class-languages">
+      <i class="fab fa-html5 mr-1" style="color: #f84820"></i>
+      <i class="fab fa-css3-alt mr-1" style="color: #1970b5"></i>
+      <i class="fab fa-js-square mr-1" style="color: #FFE01B"></i>
+    </div>
+    <div class="container">
+      <div class="main">
+        <img src="images/logo.png" alt="">
+        <div class="class-title">
+          <h1>Phaser - Partie 3</h1>
+        </div>
+      </div>
+      <p>Durant cette session, on va plus se concentrer sur la création de jeux vidéos dans le language JavaScript. Pour ce faire, on se servira de la librarie <b>Phaser</b>.</p>
+      <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
+    </div>
+  </div>
+
+  <div class="container" id="challenge">
+
+    <div class="accordion" id="accordionExample">
+
+      <!-- Étape 1 -->
+      <div class="card">
+        <div class="card-header" id="heading1">
+          <h2 class="mb-0">
+            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+              Étape 1 - Défis à compléter avant
+            </button>
+          </h2>
+        </div>
+        <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Avant d'entamer ce défi, assure toi d'avoir déjà fait ceux ci:</p>
+            <ul>
+              <li><a href="https://techieslab.github.io/PhaserJS-Introduction/">Phaser - Personnage</a></li>
+              <li><a href="https://techieslab.github.io/Phaser-Platforms/">Phaser - Plateformes</a></li>
+            </ul>
+            <p>Ensuite, assure-toi de te munir d'une grande motivation et soif d'apprendre!</p>
+            <p>Aussi, assure-toi que tu sois bien connecté à ton compte <a href="https://repl.it">Repl.It</a>, et que tu aies ton projet de la fois passée.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Étape 2 -->
+      <div class="card">
+        <div class="card-header" id="heading2">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+              Étape 2 - Perdre
+            </button>
+          </h2>
+        </div>
+        <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Lorsque tu tombes des plateformes, tu tombes à l'infini... Ce n'est pas le but! Faisons donc en sorte de perdre lorsqu'on tombe trop bas!</p>
+
+            <p>Pour voir les coordonnées X et Y du joueur, on utilise</p>
+
+            <pre><code class="language-js">
+              this.player.x;
+              this.player.y;
+            </code></pre>
+
+            <p>Essaie de les <i>logguer</i> dans la console dans la fonction <code>update</code></p>
+
+            <pre><code class="language-js">
+              console.log(/* Coordonnées X */);
+              console.log(/* Coordonnées Y */);
+            </code></pre>
+
+            <p>Observe les nombre bouger lorsque tu bouges. C'est donc les bonnes coordonnés!</p>
+
+            <p>Pour perdre, on va vérifier si la coordonnée Y est trop haute, et si elle l'est on va changer la coordonnées Y et X vers le début du jeu.</p>
+
+            <pre><code class="language-js">
+              if(/* Coordonnée Y */ > /* Nombre que tu veux */) {
+                /* Coordonnée X */ = /* X de départ */;
+                /* Coordonnée Y */ = /* Y de départ */;
+              }
+            </code></pre>
+
+            <p>Tu devrais maintenant reapparaître eau début de la partie lorsque tu tombes de la map.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="card">
+        <div class="card-header" id="heading3">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+              Étape 3 - VICTOIRE
+            </button>
+          </h2>
+        </div>
+        <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>On va alors ajouter un objet de victoire! Dessine ce joli objet en Pixel Art. Tu peux utiliser à nouveau <a href="https://www.pixilart.com">pixilart.com</a>.</p>
+
+            <p>Une fois dessiné, ajoute ton nouvel objet dans ton projet, comme tu l'as bien fait avec tes autres dessins.</p>
+
+            <p>Maintenant, il faut <b>load</b> ton personnage.</p>
+
+            <pre><code class="language-js">
+              this.load.image("coin", "coin.png");
+            </code></pre>
+
+            <p>Une fois ton image chargée dans le projet, on veut la faire apparaître quelque part. De nouveau, facile!</p>
+
+            <pre><code class="language-js">
+              this.coin = this.physics.add.sprite(500, 160, "coin");
+            </code></pre>
+
+            <p>Tu devra bien sûr changer les coordonnées X (500) et Y (160) dans ton jeu!</p>
+
+            <p>Et maintenant, la partie <b>compliquée</b>! Accroche-toi!</p>
+
+            <p>Dans la fonction <code>update</code>, on va vérifier si tu touches la pièce de victoire. Si c'est le cas, on va arrêter le jeu, et afficher que tu as gagné!</p>
+
+            <p>Pour faire quelque chose lorsque tu touches la pièce, on utilise ce code:</p>
+
+            <pre><code class="language-js">
+              this.physics.add.overlap(this.player, this.coin, function(player, coin) {
+                // Ce qu'on fait lorsqu'on touche la pièce
+              }, null, this);
+            </code></pre>
+
+            <p>Pour être sûr que tout fonctionne bien, <code>console.log</code> le mot "Touché". Souviens-toi que pour <i>logguer</i> un mot, il faut faire</p>
+
+            <pre><code class="language-js">
+              console.log(/* Mon mot entre guillemets */);
+            </code></pre>
+
+            <p>Ça marche? Super!</p>
+
+            <p>Maintenant, on va faire disparaître la pièce. Sinon, tu vas juste continuer de gagner à l'infini, vu que tu continues à la toucher!</p>
+
+            <pre><code class="language-js">
+              coin.destroy();
+            </code></pre>
+
+            <p>Essaie maintenant, tu devrais effacer la pièce au toucher.</p>
+
+            <p>Maintenant, on ajoute le texte. Pour ce faire, on va d'abord créer le texte:</p>
+
+            <pre><code class="language-js">
+              let victoryText = this.add.text(0, 0, "VICTOIRE");
+            </code></pre>
+
+            <p>On va maintenant créé le texte de victoire, mais on ne l'affiche pas encore! Pour l'afficher, on peut faire</p>
+
+            <pre><code class="language-js">
+              Phaser.Display.Align.In.Center(victoryText, this.add.zone(this.sys.game.canvas.width/2, this.sys.game.canvas.height/2, this.sys.game.canvas.width/2, this.sys.game.canvas.height/2));
+            </code></pre>
+
+            <p>Ce code a l'air plutôt compliqué non? On va le parcourir pièce par pièce:</p>
+
+            <ol>
+              <li><code>Phaser.Display.Align.In.Center</code> dit au programme d'afficher quelque chose numéro 1 au milieu de quelque chose numéro 2</li>
+              <li><code>victoryText</code> est le quelque chose numéro 1, qu'on veut afficher à l'écran</li>
+              <li><code>this.add.zone(this.sys.game.canvas.width/2, this.sys.game.canvas.height/2, this.sys.game.canvas.width/2, this.sys.game.canvas.height/2)</code> est le quelque chose numéro 2, la zone dans laquelle on veut afficher notre texte.</li>
+            </ol>
+
+            <p>Excellent! Mais le texte est un peu petit non? Comment pourrait-on l'agrandir?</p>
+
+            <p>On va changer la variable "victoryText" en </p>
+
+            <pre><code class="language-js">
+              let victoryText = this.add.text(0, 0, "VICTOIRE", {
+                fontSize: "50px",
+              });
+            </code></pre>
+
+            <p>De la même façon, on peut aussi ajouter une couleur:</p>
+
+            <pre><code class="language-js">
+              let victoryText = this.add.text(0, 0, "VICTOIRE", {
+                fontSize: "50px",
+                color: "#d53636",
+              });
+            </code></pre>
+
+            <p>Tu peux bien sûr choisir ta propre taille d'écriture et ta propre couleur!</p>
+
+            <p>Finalement, on aimerait faire en sorte que le jeu se finisse lorsqu'on prend la pièce! On va simplement mettre pause au jeu, et ne jamais le "dé-pauser"</p>
+
+            <pre><code class="language-js">
+              this.physics.pause();
+            </code></pre>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Étape 4 -->
+      <div class="card">
+        <div class="card-header" id="heading4">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+              Étape 4 - Plateformes imouvables
+            </button>
+          </h2>
+        </div>
+        <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Gros Problème! Le personnage emporte la plateforme!! Ce n'est certainement pas le but!</p>
+
+            <p>En fait, il nous faut rendre la plateforme STATIQUE. Dans ce cas là, le joueur ne saura plus l'emporter avec lui.</p>
+
+            <p>Une façon de le rendre statique est simplement de dire qu'il ne peut pas bouger. En effet, ils sont synonymes. </p>
+
+            <pre><code class="language-js">
+              this.platform.setImmovable(true);
+            </code></pre>
+
+            <p>Place ce code après avoir créé ta plateforme, mais avant d'ajouter la collision. Voilà, tu as crée la première partie de la plateforme!</p>
+          
+            <p>Mais il n'y a qu'une plateforme pour l'instant... Rajoutons-en encore une non?</p>
+
+            <p>Crée une nouvelle plateforme en utilisant</p>
+
+            <pre><code class="language-js">
+              this.platform2 = this.physics.add.sprite(XXX, YYY, "platform");
+            </code></pre>
+
+            <p>Rend cette plateforme inmouvable également!</p>
+
+            <pre><code class="language-js">
+              this.platform2.setImmovable(true);
+            </code></pre>
+
+            <p>Finalement, ajoute une collision entre le joueur et les plateformes!</p>
+
+            <pre><code class="language-js">
+              this.physics.add.collider(this.player, this.platform2);
+            </code></pre>
+
+            <p>Voilà! Tu as ajouté une nouvelle plateform, <code>platform2</code>.</p>
+
+            <p><b>CHALLENGE:</b> Ajoute encore 2 ou 3 plateformes et assure toi que tu puisse sauter d'une plateforme à l'autre.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Étape 5 -->
+      <div class="card">
+        <div class="card-header" id="heading5">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+              Étape 5 - Long Monde
+            </button>
+          </h2>
+        </div>
+        <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Imagine tu veux un monde plus long que ton écran, et que tu puisses le traverser facilement. Il faudrait que le monde bouge avec toi alors.</p>
+
+            <p>C'est bien facile à faire! Dans la fonction <code>create</code>, ajoute</p>
+
+            <pre><code class="language-js">
+              this.cameras.main.startFollow(this.player);
+            </code></pre>
+
+            <p>Ceci fera en sorte que la caméra suive ton personnage. C'est bien gentil, tu peux faire un énorme monde, mais ce sera peut-être préferable si cela ne te suit que dans la direction X.</p>
+
+            <p>Pour faire en sorte que la caméra ne te suive que dans la direction X, ajoute cette ligne dans la fonction <code>update</code>.</p>
+
+            <pre><code class="language-js">
+              this.cameras.main.setFollowOffset(0, this.player.y-this.sys.game.canvas.height/2);
+            </code></pre>
+
+            <p>Tu verra normalement un problème lorsque tu gagnes. Le texte n'est plus au milieu!</p>
+
+            <p>Pour rémédier à cela, change le code où tu crées le texte en ceci (Il faut juste ajouter <code>.setScrollFactor(0)</code>)</p>
+
+            <pre><code class="language-js">
+              let victoryText = this.add.text(0, 0, "VICTOIRE", {
+                color: "#d53636",
+                fontSize: "70px"
+              }).setScrollFactor(0);
+            </code></pre>
+
+            <p>VOILA! Tu peux maintenant commencer à construire un monde bien plus long qu'avant. Crée un joli jeu de parcours qu'on peut essayer!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Étape 6 -->
+      <div class="card">
+        <div class="card-header" id="heading6">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+              Étape 6 - Vol interdit
+            </button>
+          </h2>
+        </div>
+        <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Le jeu est trop facile pour l'instant! Tu sais voler!!</p>
+
+            <p>Pour remedier à ça, tu peux ajouter une condition en plus pour pouvoir sauter, de cette façon:</p>
+
+            <pre><code class="language-js">
+              if(this.key_W.isDown && /* Touche la plateforme */) {
+                // Sauter
+              }
+            </code></pre>
+
+            <p>Pour vérifier si tu touches la plateforme, utilise</p>
+
+            <pre><code class="language-js">
+              this.player.body.touching.down
+            </code></pre>
+
+            <p>Voilà, tu ne peux plus voler!</p>
+
+            <p><b>Challenge final: </b> Fait commencer ton joueur à gauche du jeu. Ajoute des plateformes pour faire un jeu de parcours. Pour les plus déterminés, ajoutez un drapeau (Ou autre objet de victoire) à la fin du jeu! (Attention, la dernière partie est compliquée!)</p>
+          </div>
+        </div>
+      </div>
+      
+    </div> 
+  </div>
+
+
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="https://techieslab.be/"><i class="fas fa-globe"></i></i></a>
+    <a href="https://www.facebook.com/TechiesLabBrussels"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/TechiesLab"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox#/id/r-3298711" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
+      <i class="far fa-copyright"></i>
+      2020 Techies Lab ASBL. All rights reserved.
+    </a>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="javascript/prism.js"></script>
+</body>
+</html>
