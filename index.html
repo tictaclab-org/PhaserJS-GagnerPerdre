@@ -18,11 +18,11 @@
       <i class="fab fa-css3-alt mr-1" style="color: #1970b5"></i>
       <i class="fab fa-js-square mr-1" style="color: #FFE01B"></i>
     </div>
-    <div class="container">
+    <div class="container text-center">
       <div class="main">
         <img src="images/logo.png" alt="">
-        <div class="class-title">
-          <h1>PhaserJS - Partie 3</h1>
+        <div class="class-title text-center">
+          <h1>PhaserJS<br> Fiche 3</h1>
         </div>
       </div>
       <p>Durant cette session, on va plus se concentrer sur la création de jeux vidéos dans le language JavaScript. Pour ce faire, on se servira de la librarie <b>Phaser</b>.</p>
@@ -165,7 +165,7 @@
             <p>On va maintenant créé le texte de victoire, mais on ne l'affiche pas encore! Pour l'afficher, on peut faire</p>
 
             <pre><code class="language-js">
-              Phaser.Display.Align.In.Center(victoryText, this.add.zone(this.sys.game.canvas.width/2, this.sys.game.canvas.height/2, this.sys.game.canvas.width/2, this.sys.game.canvas.height/2));
+              Phaser.Display.Align.In.Center(victoryText, this.add.zone(400, 250, 400, 250));
             </code></pre>
 
             <p>Ce code a l'air plutôt compliqué non? On va le parcourir pièce par pièce:</p>
@@ -173,7 +173,7 @@
             <ol>
               <li><code>Phaser.Display.Align.In.Center</code> dit au programme d'afficher quelque chose numéro 1 au milieu de quelque chose numéro 2</li>
               <li><code>victoryText</code> est le quelque chose numéro 1, qu'on veut afficher à l'écran</li>
-              <li><code>this.add.zone(this.sys.game.canvas.width/2, this.sys.game.canvas.height/2, this.sys.game.canvas.width/2, this.sys.game.canvas.height/2)</code> est le quelque chose numéro 2, la zone dans laquelle on veut afficher notre texte.</li>
+              <li><code>this.add.zone(400, 250, 400, 250)</code> est le quelque chose numéro 2, la zone dans laquelle on veut afficher notre texte.</li>
             </ol>
 
             <p>Excellent! Mais le texte est un peu petit non? Comment pourrait-on l'agrandir?</p>
@@ -207,57 +207,7 @@
         </div>
       </div>
 
-      <!-- Étape 4
-      <div class="card">
-        <div class="card-header" id="heading4">
-          <h2 class="mb-0">
-            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-              Étape 4 - Plateformes imouvables
-            </button>
-          </h2>
-        </div>
-        <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
-          <div class="card-body">
-            <p>Gros Problème! Le personnage emporte la plateforme!! Ce n'est certainement pas le but!</p>
-
-            <p>En fait, il nous faut rendre la plateforme STATIQUE. Dans ce cas là, le joueur ne saura plus l'emporter avec lui.</p>
-
-            <p>Une façon de le rendre statique est simplement de dire qu'il ne peut pas bouger. En effet, ils sont synonymes. </p>
-
-            <pre><code class="language-js">
-              this.platform.setImmovable(true);
-            </code></pre>
-
-            <p>Place ce code après avoir créé ta plateforme, mais avant d'ajouter la collision. Voilà, tu as crée la première partie de la plateforme!</p>
-          
-            <p>Mais il n'y a qu'une plateforme pour l'instant... Rajoutons-en encore une non?</p>
-
-            <p>Crée une nouvelle plateforme en utilisant</p>
-
-            <pre><code class="language-js">
-              this.platform2 = this.physics.add.sprite(XXX, YYY, "platform");
-            </code></pre>
-
-            <p>Rend cette plateforme inmouvable également!</p>
-
-            <pre><code class="language-js">
-              this.platform2.setImmovable(true);
-            </code></pre>
-
-            <p>Finalement, ajoute une collision entre le joueur et les plateformes!</p>
-
-            <pre><code class="language-js">
-              this.physics.add.collider(this.player, this.platform2);
-            </code></pre>
-
-            <p>Voilà! Tu as ajouté une nouvelle plateform, <code>platform2</code>.</p>
-
-            <p><b>CHALLENGE:</b> Ajoute encore 2 ou 3 plateformes et assure toi que tu puisse sauter d'une plateforme à l'autre.</p>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- Étape 5 -->
+      <!-- Étape 4 -->
       <div class="card">
         <div class="card-header" id="heading5">
           <h2 class="mb-0">
@@ -281,7 +231,7 @@
             <p>Pour faire en sorte que la caméra ne te suive que dans la direction X, ajoute cette ligne dans la fonction <code>update</code>.</p>
 
             <pre><code class="language-js">
-              this.cameras.main.setFollowOffset(0, this.player.y-this.sys.game.canvas.height/2);
+              this.cameras.main.setFollowOffset(0, this.player.y-250);
             </code></pre>
 
             <p>Tu verra normalement un problème lorsque tu gagnes. Le texte n'est plus au milieu!</p>
@@ -303,18 +253,16 @@
     </div> 
   </div>
 
-
-
 <div class="footer">
   <div class="footer-links">
     <a href="https://techieslab.be/"><i class="fas fa-globe"></i></i></a>
     <a href="https://www.facebook.com/TechiesLabBrussels"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.linkedin.com/company/techies-lab/"><i class="fab fa-linkedin"></i></a>
     <a href="https://twitter.com/TechiesLab"><i class="fab fa-twitter"></i></a>
   </div>
   <div class="footer-copyright">
-    <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox#/id/r-3298711" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
-      <i class="far fa-copyright"></i>
-      2021 Techies Lab ASBL. All rights reserved.
+    <a href="https://techieslab.be" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
+      <i class="far fa-copyright"></i> 2021 Techies Lab ASBL. All rights reserved.
     </a>
   </div>
 </div>
