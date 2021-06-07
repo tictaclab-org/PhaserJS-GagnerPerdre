@@ -13,11 +13,6 @@
 
   <!-- Introduction -->
   <div class="banner" style="display: block !important; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-08-29-13-52/nintendo-takes-down-11-year-old-pokemon-fangame-kit-1535547168922.jpg/EG11/thumbnail/750x422/format/jpg/quality/60');">
-    <div id="class-languages">
-      <i class="fab fa-html5 mr-1" style="color: #f84820"></i>
-      <i class="fab fa-css3-alt mr-1" style="color: #1970b5"></i>
-      <i class="fab fa-js-square mr-1" style="color: #FFE01B"></i>
-    </div>
     <div class="container text-center">
       <div class="main">
         <img src="images/logo.png" alt="">
@@ -94,7 +89,7 @@
               }
             </code></pre>
 
-            <p>Tu devrais maintenant reapparaître eau début de la partie lorsque tu tombes de la map.</p>
+            <p>Tu devrais maintenant reapparaître au début de la partie lorsque tu tombes de la map.</p>
           </div>
         </div>
       </div>
@@ -104,7 +99,7 @@
         <div class="card-header" id="heading3">
           <h2 class="mb-0">
             <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-              Étape 3 - VICTOIRE
+              Étape 3 - Victoire! ✌️
             </button>
           </h2>
         </div>
@@ -154,7 +149,7 @@
               coin.destroy();
             </code></pre>
 
-            <p>Essaie maintenant, tu devrais effacer la pièce au toucher.</p>
+            <p>Essaie maintenant: la pièce devrait s'effacer lorsqu'on la touche.</p>
 
             <p>Maintenant, on ajoute le texte. Pour ce faire, on va d'abord créer le texte:</p>
 
@@ -207,18 +202,72 @@
         </div>
       </div>
 
+<<<<<<< HEAD
       <!-- Étape 4 -->
+=======
+      <!-- Étape 4
+      <div class="card">
+        <div class="card-header" id="heading4">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+              Étape 4 - Plateformes imouvables
+            </button>
+          </h2>
+        </div>
+        <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Gros Problème! Le personnage emporte la plateforme!! Ce n'est certainement pas le but!</p>
+
+            <p>En fait, il nous faut rendre la plateforme STATIQUE. Dans ce cas là, le joueur ne saura plus l'emporter avec lui.</p>
+
+            <p>Une façon de le rendre statique est simplement de dire qu'il ne peut pas bouger. En effet, ils sont synonymes. </p>
+
+            <pre><code class="language-js">
+              this.platform.setImmovable(true);
+            </code></pre>
+
+            <p>Place ce code après avoir créé ta plateforme, mais avant d'ajouter la collision. Voilà, tu as crée la première partie de la plateforme!</p>
+
+            <p>Mais il n'y a qu'une plateforme pour l'instant... Rajoutons-en encore une non?</p>
+
+            <p>Crée une nouvelle plateforme en utilisant</p>
+
+            <pre><code class="language-js">
+              this.platform2 = this.physics.add.sprite(XXX, YYY, "platform");
+            </code></pre>
+
+            <p>Rend cette plateforme inmouvable également!</p>
+
+            <pre><code class="language-js">
+              this.platform2.setImmovable(true);
+            </code></pre>
+
+            <p>Finalement, ajoute une collision entre le joueur et les plateformes!</p>
+
+            <pre><code class="language-js">
+              this.physics.add.collider(this.player, this.platform2);
+            </code></pre>
+
+            <p>Voilà! Tu as ajouté une nouvelle plateform, <code>platform2</code>.</p>
+
+            <p><b>CHALLENGE:</b> Ajoute encore 2 ou 3 plateformes et assure toi que tu puisse sauter d'une plateforme à l'autre.</p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Étape 5 -->
+>>>>>>> 31eb16f6b881e26e43be6889c1aab8899fb40a10
       <div class="card">
         <div class="card-header" id="heading5">
           <h2 class="mb-0">
             <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-              Étape 4 - Long Monde
+              Étape 4 - Un monde sans limites... ou presque 🗺️
             </button>
           </h2>
         </div>
         <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Imagine tu veux un monde plus long que ton écran, et que tu puisses le traverser facilement. Il faudrait que le monde bouge avec toi alors.</p>
+            <p>Imagine que tu veuilles un monde plus long que ton écran, et que tu puisses le traverser facilement. Il faudrait que le monde bouge avec ton personnage alors.</p>
 
             <p>C'est bien facile à faire! Dans la fonction <code>create</code>, ajoute</p>
 
@@ -226,17 +275,17 @@
               this.cameras.main.startFollow(this.player);
             </code></pre>
 
-            <p>Ceci fera en sorte que la caméra suive ton personnage. C'est bien gentil, tu peux faire un énorme monde, mais ce sera peut-être préferable si cela ne te suit que dans la direction X.</p>
+            <p>Ceci fera en sorte que la caméra suive ton personnage. C'est bien gentil et tu peux créer un énorme monde. Ceci étant dit, il serait préférable que la caméra ne suive notre personnage que dans la direction horizontale (l'axe des X).</p>
 
-            <p>Pour faire en sorte que la caméra ne te suive que dans la direction X, ajoute cette ligne dans la fonction <code>update</code>.</p>
+            <p>Pour cela, ajoute cette ligne dans la fonction <code>update</code>:</p>
 
             <pre><code class="language-js">
               this.cameras.main.setFollowOffset(0, this.player.y-250);
             </code></pre>
 
-            <p>Tu verra normalement un problème lorsque tu gagnes. Le texte n'est plus au milieu!</p>
+            <p>Petit problème: maintenant, lorsque tu gagnes, le texte n'est plus au milieu 😓</p>
 
-            <p>Pour rémédier à cela, change le code où tu crées le texte en ceci (Il faut juste ajouter <code>.setScrollFactor(0)</code>)</p>
+            <p>Pour rémédier à cela, change le code où tu crées le texte en ceci (il faut juste ajouter <code>.setScrollFactor(0)</code>)</p>
 
             <pre><code class="language-js">
               let victoryText = this.add.text(0, 0, "VICTOIRE", {
@@ -250,7 +299,7 @@
         </div>
       </div>
 
-    </div> 
+    </div>
   </div>
 
 <div class="footer">
