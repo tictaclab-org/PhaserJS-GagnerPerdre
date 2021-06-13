@@ -229,18 +229,18 @@
               this.cameras.main.setFollowOffset(0, this.player.y-250);
             </code></pre>
 
-            <p>Petit problème: maintenant, lorsque tu gagnes, le texte n'est plus au milieu 😓</p>
+            <p>Small problem: now, when you win, the text is no longer in the middle 😓</p>
 
-            <p>Pour rémédier à cela, change le code où tu crées le texte en ceci (il faut juste ajouter <code>.setScrollFactor(0)</code>)</p>
+            <p>To fix this, change the code where you create the text to this (just add <code>.setScrollFactor(0)</code>)</p>
 
             <pre><code class="language-js">
-              let victoryText = this.add.text(0, 0, "VICTOIRE", {
+              let victoryText = this.add.text(0, 0, "VICTORY", {
                 color: "#d53636",
                 fontSize: "70px"
               }).setScrollFactor(0);
             </code></pre>
 
-            <p>VOILA! Tu peux maintenant commencer à construire un monde bien plus long qu'avant. Crée un joli jeu de parcours qu'on peut essayer!</p>
+            <p>VOILA! Now you can start building a much longer world than before. Create a nice obstacle game that we can try!</p>
           </div>
         </div>
       </div>
