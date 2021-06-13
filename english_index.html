@@ -17,14 +17,14 @@
       <div class="main">
         <img src="images/logo.png" alt="">
         <div class="class-title text-center">
-          <h1>PhaserJS<br> Fiche 3</h1>
+          <h1>PhaserJS<br> Activity Sheet 3</h1>
         </div>
       </div>
-      <p>Durant cette session, on va plus se concentrer sur la création de jeux vidéos dans le language JavaScript. Pour ce faire, on se servira de la librarie <b>Phaser</b>.</p>
-      <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
+      <p>During this session, we will focus on the creation of video games in the JavaScript. To do this, we will use the <b>Phaser</b> library.</p>
+      <a class="btn btn-primary tl-button" href="#challenge" role="button">Start !</a>
     </div>
   </div>
-  <p id=language-link>🗨️ For the english version click<a href="english_index.html"> here</a>!</p>
+  <p id=language-link>🗨️ Pour la version francaise, clique <a href="index.html"> ici</a>!</p>
 
   <div class="container" id="challenge">
 
@@ -35,19 +35,19 @@
         <div class="card-header" id="heading1">
           <h2 class="mb-0">
             <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-              Étape 1 - Défis à compléter avant
+              Step 1 - Challenges to be completed before
             </button>
           </h2>
         </div>
         <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Avant d'entamer ce défi, assure toi d'avoir déjà fait ceux-ci:</p>
+            <p>Before you start this challenge, make sure you have already done these:</p>
             <ul>
               <li><a href="https://techieslab.github.io/PhaserJS-Introduction/">PhaserJS - Personnage</a></li>
               <li><a href="https://techieslab.github.io/PhaserJS-Platforms/">PhaserJS - Plateformes</a></li>
             </ul>
-            <p>Ensuite, assure-toi de te munir d'une grande motivation et soif d'apprendre!</p>
-            <p>Aussi, assure-toi que tu sois bien connecté à ton compte <a href="https://repl.it">Repl.It</a>, et que tu aies ton projet de la fois passée.</p>
+            <p>Secondly, make sure you are highly motivated and eager to learn!</p>
+            <p>Also, make sure you are logged into your <a href="https://repl.it">Repl.It</a> account, and that you have your project from last time.</p>
           </div>
         </div>
       </div>
@@ -57,40 +57,40 @@
         <div class="card-header" id="heading2">
           <h2 class="mb-0">
             <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-              Étape 2 - Perdre
+              Step 2 - Lose
             </button>
           </h2>
         </div>
         <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Lorsque tu tombes des plateformes, tu tombes à l'infini... Ce n'est pas le but! Faisons donc en sorte de perdre lorsqu'on tombe trop bas!</p>
+            <p>When you fall off platforms, you fall forever... That's not the point! So let's make sure we lose when we fall too low!</p>
 
-            <p>Pour voir les coordonnées X et Y du joueur, on utilise</p>
+            <p>To see the X and Y coordinates of the player, we use</p>
 
             <pre><code class="language-js">
               this.player.x;
               this.player.y;
             </code></pre>
 
-            <p>Essaie de les <i>logguer</i> dans la console dans la fonction <code>update</code></p>
+            <p>Try to log the coordinates in the console by writing this code in the <code>update</code> function:</p>
 
             <pre><code class="language-js">
-              console.log(/* Coordonnées X */);
-              console.log(/* Coordonnées Y */);
+              console.log(/* X coordinate */);
+              console.log(/* Y coordinate */);
             </code></pre>
 
-            <p>Observe les nombres changer lorsque tu bouges. Ce sont les bonnes coordonnées!</p>
+            <p>Watch the numbers change when you move. You are logging the right coordinates!</p>
 
-            <p>Pour perdre, on va vérifier si la coordonnée Y est trop haute, et si elle l'est on va changer la coordonnées Y et X vers le début du jeu.</p>
+            <p>To lose, we check if the Y coordinate is too high, and if it is, we change the Y and X coordinates so that our character moves towards the beginning of the game.</p>
 
             <pre><code class="language-js">
-              if(/* Coordonnée Y */ > /* Nombre que tu veux */) {
-                /* Coordonnée X */ = /* X de départ */;
-                /* Coordonnée Y */ = /* Y de départ */;
+              if(/* Y coordinate */ > /* Number you'd like */) {
+                /* X coordinate */ = /* Starting X */;
+                /* Y coordinate */ = /* Starting Y */;
               }
             </code></pre>
 
-            <p>Tu devrais maintenant reapparaître au début de la partie lorsque tu tombes de la map.</p>
+            <p>You should now reappear at the beginning of the game when you fall off the map.</p>
           </div>
         </div>
       </div>
@@ -100,100 +100,100 @@
         <div class="card-header" id="heading3">
           <h2 class="mb-0">
             <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-              Étape 3 - Victoire! ✌️
+              Step 3 - Victory! ✌️
             </button>
           </h2>
         </div>
         <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
           <div class="card-body">
-            <p>On va maintenant ajouter un objet de victoire! Dessine ce joli objet en Pixel Art. Tu peux utiliser à nouveau <a href="https://www.pixilart.com">pixilart.com</a>.</p>
+            <p>Let's add a victory object! Draw this lovely object in Pixel Art. You can use <a href="https://www.pixilart.com">pixilart.com</a> again.</p>
 
-            <p>Une fois dessiné, ajoute ton nouvel objet dans ton projet, comme tu l'as bien fait avec tes autres dessins.</p>
+            <p>Once drawn, add your new object to your project, as you did with your other drawings.</p>
 
-            <p>Maintenant, il faut <b>load</b> ton personnage.</p>
+            <p>Now, load this new sprite (character).</p>
 
             <pre><code class="language-js">
               this.load.image("coin", "coin.png");
             </code></pre>
 
-            <p>Une fois ton image chargée dans le projet, on veut la faire apparaître quelque part. De nouveau, facile!</p>
+            <p>Once your image is loaded into the project, we want it to appear somewhere. Again, easy!p>
 
             <pre><code class="language-js">
               this.coin = this.physics.add.sprite(500, 160, "coin");
             </code></pre>
 
-            <p>Tu devras bien sûr changer les coordonnées X (500) et Y (160) dans ton jeu!</p>
+            <p>You will of course have to change the X (500) and Y (160) coordinates in your game!</p>
 
-            <p>Et maintenant, la partie <b>compliquée</b>! Accroche-toi!</p>
+            <p>And now for the <b>hard</b> bit! Hang in there!</p>
 
-            <p>Dans la fonction <code>update</code>, on va vérifier si tu touches la pièce de victoire. Si c'est le cas, on va arrêter le jeu, et afficher que tu as gagné!</p>
+            <p>In the <code>update</code> function, we'll check if you hit the victory coin. If you do, we'll stop the game, and display that you won!</p>
 
-            <p>Pour faire quelque chose lorsque tu touches la pièce, on utilise ce code:</p>
+            <p>To do something when you touch the coin, we use this code:</p>
 
             <pre><code class="language-js">
               this.physics.add.overlap(this.player, this.coin, function(player, coin) {
-                // Ce qu'on fait lorsqu'on touche la pièce
+                // What we do when we touch the coin
               }, null, this);
             </code></pre>
 
-            <p>Pour être sûr que tout fonctionne bien, <code>console.log</code> le mot "Touché". Souviens-toi que pour <i>logguer</i> un mot, il faut faire</p>
+            <p>To make sure everything is working properly, <code>console.log</code> the word "Touched". Remember that to <i>log</i> a word, you have to do</p>
 
             <pre><code class="language-js">
-              console.log(/* Mon mot entre guillemets */);
+              console.log(/* My word surrounded by quotation marks */);
             </code></pre>
 
-            <p>Ça marche? Super!</p>
+            <p>It works? Great!</p>
 
-            <p>Maintenant, on va faire disparaître la pièce. Sinon, tu vas juste continuer de gagner à l'infini, vu que tu continues à la toucher!</p>
+            <p>Now we'll make the coin disappear. Otherwise, you'll just keep winning forever, as you keep touching it!</p>
 
             <pre><code class="language-js">
               coin.destroy();
             </code></pre>
 
-            <p>Essaie maintenant: la pièce devrait s'effacer lorsqu'on la touche.</p>
+            <p>Try it now: the coin should fade away when touched.</p>
 
-            <p>Maintenant, on ajoute le texte. Pour ce faire, on va d'abord créer le texte:</p>
+            <p>Now we add the text. To do this, we will first create the text:</p>
 
             <pre><code class="language-js">
-              let victoryText = this.add.text(0, 0, "VICTOIRE");
+              let victoryText = this.add.text(0, 0, "VICTORY");
             </code></pre>
 
-            <p>On a créé le texte de victoire, mais on ne l'affiche pas encore! Pour l'afficher, on peut faire</p>
+            <p>We have created the victory text, but we don't display it yet! To display it, you can do</p>
 
             <pre><code class="language-js">
               Phaser.Display.Align.In.Center(victoryText, this.add.zone(400, 250, 400, 250));
             </code></pre>
 
-            <p>Ce code a l'air plutôt compliqué non? On va le parcourir section par section:</p>
+            <p>This code looks rather complicated, doesn't it? Let's go through it section by section:</p>
 
             <ol>
-              <li><code>Phaser.Display.Align.In.Center</code> dit au programme d'afficher quelque chose numéro 1 au milieu de quelque chose numéro 2</li>
-              <li><code>victoryText</code> est le quelque chose numéro 1, qu'on veut afficher à l'écran</li>
-              <li><code>this.add.zone(400, 250, 400, 250)</code> est le quelque chose numéro 2, la zone dans laquelle on veut afficher notre texte.</li>
+              <li><code>Phaser.Display.Align.In.Center</code> tells the program to display something number 1 in the middle of something number 2</li>
+              <li><code>victoryText</code> is the number 1 something, which we want to display on the screen</li>
+              <li><code>this.add.zone(400, 250, 400, 250)</code> is something number 2, the zone in which we want to display our text.</li>
             </ol>
 
-            <p>Excellent! Mais le texte est un peu petit non? Comment pourrait-on l'agrandir?</p>
+            <p>Excellent! But the text is a bit small, isn't it? How can we make it bigger?</p>
 
-            <p>On va changer la variable "victoryText" en </p>
+            <p>Let's change the variable <code>victoryText</code> to</p>
 
             <pre><code class="language-js">
-              let victoryText = this.add.text(0, 0, "VICTOIRE", {
+              let victoryText = this.add.text(0, 0, "VICTORY", {
                 fontSize: "50px",
               });
             </code></pre>
 
-            <p>De la même façon, on peut aussi ajouter une couleur:</p>
+            <p>Likewise, we can also add a color:</p>
 
             <pre><code class="language-js">
-              let victoryText = this.add.text(0, 0, "VICTOIRE", {
+              let victoryText = this.add.text(0, 0, "VICTORY", {
                 fontSize: "50px",
                 color: "#d53636",
               });
             </code></pre>
 
-            <p>Tu peux bien sûr choisir ta propre taille d'écriture et ta propre couleur!</p>
+            <p>You can of course choose your own font size and color!</p>
 
-            <p>Finalement, on aimerait faire en sorte que le jeu se finisse lorsqu'on prend la pièce! On va simplement mettre pause au jeu, et ne jamais le "dé-pauser"</p>
+            <p>Finally, we'd like to make sure that the game ends when we take the coin! We'll just pause the game, and never "un-pause" it</p>
 
             <pre><code class="language-js">
               this.physics.pause();
@@ -207,23 +207,23 @@
         <div class="card-header" id="heading5">
           <h2 class="mb-0">
             <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-              Étape 4 - Un monde sans limites... ou presque 🗺️
+              Step 4 - A world without limits... or almost 🗺️
             </button>
           </h2>
         </div>
         <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Imagine que tu veuilles un monde plus long que ton écran, et que tu puisses le traverser facilement. Il faudrait que le monde bouge avec ton personnage.</p>
+            <p>Imagine that you want a world that is longer than your screen, and that you can move through it easily. The world would have to move with your character.</p>
 
-            <p>C'est bien facile à faire! Dans la fonction <code>create</code>, ajoute</p>
+            <p>It's easy to do! In the <code>create</code> function, add</p>
 
             <pre><code class="language-js">
               this.cameras.main.startFollow(this.player);
             </code></pre>
 
-            <p>Ceci fera en sorte que la caméra suivera ton personnage partout. Tu peux maintenant créer un très très grand monde. Ceci étant dit, il serait préférable que la caméra ne suive notre personnage que dans la direction horizontale (l'axe des X).</p>
+            <p>This will make the camera follow your character everywhere. You can now create a very, very large world. Having said that, it would be better if the camera only followed our character in the horizontal direction (the x-axis).</p>
 
-            <p>Pour cela, ajoute cette ligne dans la fonction <code>update</code>:</p>
+            <p>To do this, add this line to the <code>update</code> function:</p>
 
             <pre><code class="language-js">
               this.cameras.main.setFollowOffset(0, this.player.y-250);
