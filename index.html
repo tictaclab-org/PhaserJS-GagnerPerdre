@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>PhaserJS #3</title>
-  <link rel="shortcut icon" type="image/png" href="images/ico_full.png"/>
+  <link rel="shortcut icon" type="image/png" href="images/ico_full.png" />
   <link rel="stylesheet" href="stylesheet/prism.css">
   <link rel="stylesheet" href="stylesheet/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body>
 
   <!-- Introduction -->
-  <div class="banner" style="display: block !important; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-08-29-13-52/nintendo-takes-down-11-year-old-pokemon-fangame-kit-1535547168922.jpg/EG11/thumbnail/750x422/format/jpg/quality/60');">
+  <div class="banner"
+    style="display: block !important; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-08-29-13-52/nintendo-takes-down-11-year-old-pokemon-fangame-kit-1535547168922.jpg/EG11/thumbnail/750x422/format/jpg/quality/60');">
     <div class="container text-center">
       <div class="main">
         <img src="images/logo.png" alt="">
@@ -20,7 +25,8 @@
           <h1>PhaserJS<br> Fiche 3</h1>
         </div>
       </div>
-      <p>Durant cette session, on va plus se concentrer sur la création de jeux vidéos dans le language JavaScript. Pour ce faire, on se servira de la librarie <b>Phaser</b>.</p>
+      <p>Durant cette session, on va plus se concentrer sur la création de jeux vidéos dans le language JavaScript. Pour
+        ce faire, on se servira de la librarie <b>Phaser</b>.</p>
       <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
     </div>
   </div>
@@ -34,7 +40,8 @@
       <div class="card">
         <div class="card-header" id="heading1">
           <h2 class="mb-0">
-            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapse1"
+              aria-expanded="false" aria-controls="collapse1">
               Étape 1 - Défis à compléter avant
             </button>
           </h2>
@@ -43,11 +50,11 @@
           <div class="card-body">
             <p>Avant d'entamer ce défi, assure toi d'avoir déjà fait ceux-ci:</p>
             <ul>
-              <li><a href="https://techieslab.github.io/PhaserJS-Introduction/">PhaserJS - Personnage</a></li>
-              <li><a href="https://techieslab.github.io/PhaserJS-Platforms/">PhaserJS - Plateformes</a></li>
+              <li><a href="https://tictaclab-org.github.io/PhaserJS-Introduction/">PhaserJS - Personnage</a></li>
+              <li><a href="https://tictaclab.github.io/PhaserJS-Platforms/">PhaserJS - Plateformes</a></li>
             </ul>
-            <p>Ensuite, assure-toi de te munir d'une grande motivation et soif d'apprendre!</p>
-            <p>Aussi, assure-toi que tu sois bien connecté à ton compte <a href="https://repl.it">Repl.It</a>, et que tu aies ton projet de la fois passée.</p>
+            <p>Aussi, assure-toi que tu sois bien connecté à ton compte <a href="https://repl.it">Repl.It</a>, et que tu
+              aies ton projet de la fois passée.</p>
           </div>
         </div>
       </div>
@@ -56,16 +63,19 @@
       <div class="card">
         <div class="card-header" id="heading2">
           <h2 class="mb-0">
-            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse2"
+              aria-expanded="false" aria-controls="collapse2">
               Étape 2 - Perdre
             </button>
           </h2>
         </div>
         <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Lorsque tu tombes des plateformes, tu tombes à l'infini... Ce n'est pas le but! Faisons donc en sorte de perdre lorsqu'on tombe trop bas!</p>
+            <p>Lorsque tu tombes des plateformes, tu tombes dans le vide et tu descends à l'infini... Ce n'est pas le
+              but! Faisons en sorte de
+              perdre lorsqu'on tombe trop bas!</p>
 
-            <p>Pour voir les coordonnées X et Y du joueur, on utilise</p>
+            <p>Pour voir les coordonnées en X et en Y du joueur, on utilise</p>
 
             <pre><code class="language-js">
               this.player.x;
@@ -81,7 +91,9 @@
 
             <p>Observe les nombres changer lorsque tu bouges. Ce sont les bonnes coordonnées!</p>
 
-            <p>Pour perdre, on va vérifier si la coordonnée Y est trop haute, et si elle l'est on va changer la coordonnées Y et X vers le début du jeu.</p>
+            <p>Pour perdre, on va vérifier si la coordonnée Y est trop haute. Si (
+            <pre><code class="language-js">if</code></pre>) elle l'est, on va changer rétablir les
+            coordonnées X et Y au début du jeu.</p>
 
             <pre><code class="language-js">
               if(/* Coordonnée Y */ > /* Nombre que tu veux */) {
@@ -90,7 +102,7 @@
               }
             </code></pre>
 
-            <p>Tu devrais maintenant reapparaître au début de la partie lorsque tu tombes de la map.</p>
+            <p>Ton personnage devrait maintenant reapparaître au début de la partie lorsqu'il tombe dans le vide.</p>
           </div>
         </div>
       </div>
@@ -99,16 +111,19 @@
       <div class="card">
         <div class="card-header" id="heading3">
           <h2 class="mb-0">
-            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse3"
+              aria-expanded="false" aria-controls="collapse3">
               Étape 3 - Victoire! ✌️
             </button>
           </h2>
         </div>
         <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
           <div class="card-body">
-            <p>On va maintenant ajouter un objet de victoire! Dessine ce joli objet en Pixel Art. Tu peux utiliser à nouveau <a href="https://www.pixilart.com">pixilart.com</a>.</p>
+            <p>On va maintenant ajouter un objet de victoire! Dessine ce joli objet en Pixel Art. Tu peux utiliser à
+              nouveau <a href="https://www.pixilart.com">pixilart.com</a>.</p>
 
-            <p>Une fois dessiné, ajoute ton nouvel objet dans ton projet, comme tu l'as bien fait avec tes autres dessins.</p>
+            <p>Une fois dessiné, ajoute ton nouvel objet dans ton projet, comme tu l'as bien fait avec tes autres
+              dessins.</p>
 
             <p>Maintenant, il faut <b>load</b> ton personnage.</p>
 
@@ -116,7 +131,8 @@
               this.load.image("coin", "coin.png");
             </code></pre>
 
-            <p>Une fois ton image chargée dans le projet, on veut la faire apparaître quelque part. De nouveau, facile!</p>
+            <p>Une fois ton image chargée dans le projet, on veut la faire apparaître quelque part. De nouveau, facile!
+            </p>
 
             <pre><code class="language-js">
               this.coin = this.physics.add.sprite(500, 160, "coin");
@@ -126,7 +142,8 @@
 
             <p>Et maintenant, la partie <b>compliquée</b>! Accroche-toi!</p>
 
-            <p>Dans la fonction <code>update</code>, on va vérifier si tu touches la pièce de victoire. Si c'est le cas, on va arrêter le jeu, et afficher que tu as gagné!</p>
+            <p>Dans la fonction <code>update</code>, on va vérifier si tu touches la pièce de victoire. Si c'est le cas,
+              on va arrêter le jeu, et afficher que tu as gagné!</p>
 
             <p>Pour faire quelque chose lorsque tu touches la pièce, on utilise ce code:</p>
 
@@ -136,7 +153,9 @@
               }, null, this);
             </code></pre>
 
-            <p>Pour être sûr que tout fonctionne bien, <code>console.log</code> le mot "Touché". Souviens-toi que pour <i>logguer</i> un mot, il faut faire</p>
+            <p>Pour être sûr.e que tout fonctionne bien, <code>console.log</code> le mot "Touché". Souviens-toi que pour
+              <i>logguer</i> un mot, il faut faire
+            </p>
 
             <pre><code class="language-js">
               console.log(/* Mon mot entre guillemets */);
@@ -144,7 +163,8 @@
 
             <p>Ça marche? Super!</p>
 
-            <p>Maintenant, on va faire disparaître la pièce. Sinon, tu vas juste continuer de gagner à l'infini, vu que tu continues à la toucher!</p>
+            <p>Maintenant, on va faire disparaître la pièce. Sinon, tu vas juste continuer de gagner à l'infini, vu que
+              tu continues à la toucher!</p>
 
             <pre><code class="language-js">
               coin.destroy();
@@ -167,9 +187,11 @@
             <p>Ce code a l'air plutôt compliqué non? On va le parcourir section par section:</p>
 
             <ol>
-              <li><code>Phaser.Display.Align.In.Center</code> dit au programme d'afficher quelque chose numéro 1 au milieu de quelque chose numéro 2</li>
+              <li><code>Phaser.Display.Align.In.Center</code> dit au programme d'afficher quelque chose numéro 1 au
+                milieu de quelque chose numéro 2</li>
               <li><code>victoryText</code> est le quelque chose numéro 1, qu'on veut afficher à l'écran</li>
-              <li><code>this.add.zone(400, 250, 400, 250)</code> est le quelque chose numéro 2, la zone dans laquelle on veut afficher notre texte.</li>
+              <li><code>this.add.zone(400, 250, 400, 250)</code> est le quelque chose numéro 2, la zone dans laquelle on
+                veut afficher notre texte.</li>
             </ol>
 
             <p>Excellent! Mais le texte est un peu petit non? Comment pourrait-on l'agrandir?</p>
@@ -193,7 +215,8 @@
 
             <p>Tu peux bien sûr choisir ta propre taille d'écriture et ta propre couleur!</p>
 
-            <p>Finalement, on aimerait faire en sorte que le jeu se finisse lorsqu'on prend la pièce! On va simplement mettre pause au jeu, et ne jamais le "dé-pauser"</p>
+            <p>Finalement, on aimerait faire en sorte que le jeu se finisse lorsqu'on prend la pièce! On va simplement
+              mettre le jeu sur pause, et ne jamais le "dé-pauser"</p>
 
             <pre><code class="language-js">
               this.physics.pause();
@@ -206,22 +229,26 @@
       <div class="card">
         <div class="card-header" id="heading5">
           <h2 class="mb-0">
-            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse5"
+              aria-expanded="false" aria-controls="collapse5">
               Étape 4 - Un monde sans limites... ou presque 🗺️
             </button>
           </h2>
         </div>
         <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Imagine que tu veuilles un monde plus long que ton écran, et que tu puisses le traverser facilement. Il faudrait que le monde bouge avec ton personnage.</p>
+            <p>Imagine que tu veuilles un monde plus long que ton écran, et que tu puisses le traverser facilement. Il
+              faudrait que le monde bouge avec ton personnage.</p>
 
-            <p>C'est bien facile à faire! Dans la fonction <code>create</code>, ajoute</p>
+            <p>C'est facile à faire! Dans la fonction <code>create</code>, ajoute</p>
 
             <pre><code class="language-js">
               this.cameras.main.startFollow(this.player);
             </code></pre>
 
-            <p>Ceci fera en sorte que la caméra suivera ton personnage partout. Tu peux maintenant créer un très très grand monde. Ceci étant dit, il serait préférable que la caméra ne suive notre personnage que dans la direction horizontale (l'axe des X).</p>
+            <p>Ceci fera en sorte que la caméra suivera ton personnage partout. Tu peux maintenant créer un très très
+              grand monde. Ceci étant dit, il serait préférable que la caméra ne suive notre personnage que dans la
+              direction horizontale (l'axe des X).</p>
 
             <p>Pour cela, ajoute cette ligne dans la fonction <code>update</code>:</p>
 
@@ -231,7 +258,9 @@
 
             <p>Petit problème: maintenant, lorsque tu gagnes, le texte n'est plus au milieu 😓</p>
 
-            <p>Pour rémédier à cela, change le code où tu crées le texte en ceci (il faut juste ajouter <code>.setScrollFactor(0)</code>)</p>
+            <p>Pour rémédier à cela, change le code où tu crées le texte comme ceci (il faut juste ajouter
+              <code>.setScrollFactor(0)</code>):
+            </p>
 
             <pre><code class="language-js">
               let victoryText = this.add.text(0, 0, "VICTOIRE", {
@@ -240,7 +269,8 @@
               }).setScrollFactor(0);
             </code></pre>
 
-            <p>VOILA! Tu peux maintenant commencer à construire un monde bien plus long qu'avant. Crée un joli jeu de parcours qu'on peut essayer!</p>
+            <p>VOILA! Tu peux maintenant commencer à construire un monde bien plus long qu'avant. Crée un joli jeu de
+              parcours qu'on peut essayer!</p>
           </div>
         </div>
       </div>
@@ -248,22 +278,30 @@
     </div>
   </div>
 
-<div class="footer">
-  <div class="footer-links">
-    <a href="https://techieslab.be/"><i class="fas fa-globe"></i></i></a>
-    <a href="https://www.facebook.com/TechiesLabBrussels"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.linkedin.com/company/techies-lab/"><i class="fab fa-linkedin"></i></a>
-    <a href="https://twitter.com/TechiesLab"><i class="fab fa-twitter"></i></a>
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://tictaclab.org/"><i class="fas fa-globe"></i></i></a>
+      <a href="https://www.instagram.com/tictaclabbxl/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/TicTacLabBXL/"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/company/tictaclab/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://tictaclab-org.github.io/Fiches/"><i class="fa fa-list"></i> Retour aux fiches</a>
+    </div>
+    <div class="footer-copyright">
+      <a href="https://tictaclab.org" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
+        <i class="far fa-copyright"></i> 2023 Tic Tac Lab ASBL. All rights reserved.
+      </a>
+    </div>
   </div>
-  <div class="footer-copyright">
-    <a href="https://techieslab.be" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
-      <i class="far fa-copyright"></i> 2021 Techies Lab ASBL. All rights reserved.
-    </a>
-  </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="javascript/prism.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="javascript/prism.js"></script>
 </body>
+
 </html>
